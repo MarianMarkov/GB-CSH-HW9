@@ -1,14 +1,20 @@
 ﻿// Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-Console.Write(" От ");
+Console.WriteLine("m:");
 int m = int.Parse(Console.ReadLine()!);
-Console.Write(" До ");
+
+Console.WriteLine("n:");
 int n = int.Parse(Console.ReadLine()!);
-int summ = 0;
-for (int i = m; i < n + 1; i++)
+
+void SummMN (int M, int N, int summ)
 {
-    if (i > 0)
+    if (M > N) 
     {
-        summ = summ + i;
+        Console.WriteLine($"Сумма натуральных элементов от m до n: {summ}"); 
+        return;
     }
+    summ = summ + M;
+    M++;
+    SummMN(M, N, summ);
 }
-Console.WriteLine($"Сумма натуральных элементов от {m} до {n} равна {summ}");
+
+SummMN(m, n, 0);
