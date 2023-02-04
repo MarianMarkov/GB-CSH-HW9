@@ -9,7 +9,7 @@ void SummMN (int M, int N, int summ)
 {
     if (M > N) 
     {
-        Console.WriteLine($"Сумма натуральных элементов от m до n: {summ}"); 
+        Console.WriteLine($"Сумма натуральных элементов от {m} до {n}: {summ}"); 
         return;
     }
     summ = summ + M;
